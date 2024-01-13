@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <annotation>
+    <SimBiology xmlns="http://www.mathworks.com">
+      <Version Major="5" Minor="9" Point="0"/>
+    </SimBiology>
+  </annotation>
+  <model id="mw2376233e_6ac3_4012_a9f9_7cf614f0ad66" name="E2ICIpalbo">
+    <listOfUnitDefinitions>
+      <unitDefinition id="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" name="micromole">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" multiplier="1e-06"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWDERIVEDUNIT_micromole__hour" name="micromole/hour">
+        <listOfUnits>
+          <unit kind="mole" exponent="1"/>
+          <unit kind="second" exponent="-1"/>
+          <unit kind="dimensionless" multiplier="2.77777777777778e-10"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWDERIVEDUNIT_1__hour" name="1/hour">
+        <listOfUnits>
+          <unit kind="second" exponent="-1"/>
+          <unit kind="dimensionless" multiplier="0.000277777777777778"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWDERIVEDUNIT_1__micromole_hour" name="1/(micromole*hour)">
+        <listOfUnits>
+          <unit kind="mole" exponent="-1"/>
+          <unit kind="second" exponent="-1"/>
+          <unit kind="dimensionless" multiplier="277.777777777778"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="mw06a618f5_f884_46a9_8352_8240cd75a1ec" name="cell" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="mwcab96836_5f80_41d4_98fe_893c7557c108" name="ER" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0.00208129779676" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw732f7895_6c40_43f1_8001_6bdf949d3c68" name="E2ER" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0.068306234067747" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwae3bf4e1_8b50_48e5_9cd2_3b20f73a00c4" name="ICIER" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw630a5401_4594_46aa_a502_35e6dbc9a860" name="cyclinD1" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0.182335175188379" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwaaaed7d5_121b_49b5_acc0_e30372f11c44" name="cyclinD1p21" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0.218746381556807" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwf2d9d900_de26_4313_af00_17bd60f0caef" name="cyclinD1palbo" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw96000cb9_f2e6_4e14_8013_960c9dc496f1" name="cMyc" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="6.53486367895232" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca" name="p21" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0.102073280559857" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw1d8fadfb_5abc_400e_aea5_d1ff6d880cdf" name="cyclinE" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0.306030014871499" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwea85c523_f44d_4eeb_9ef3_046d4b1bacbf" name="cyclinEp21" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0.273682215344328" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwa1d1b0e5_5621_4ea2_bb3e_2f11acc77c6c" name="Rb" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="76.8573457367942" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw150892bd_c83b_4567_b0ae_c04025551ad3" name="pRb" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0.481048617463593" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw34b1e009_f1de_435e_8a7a_7b3cd83118a6" name="ppRb" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="7.30631527260022" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwf5519598_9197_43a1_b3fc_7daf2f123df0" name="cell" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw5110e0b1_1a78_4b4e_90e3_6f89de4ea28e" name="ERt" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw41b0d634_e62b_491e_8077_258b60f89c5a" name="cyclinD1t" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mwb773085b_bd65_41d1_b8b3_5bd93589aaf8" name="p21t" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mweabf9ed5_d75d_4325_8f74_a8919d4c7a23" name="Rbt" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw201d8b07_22a6_4d01_b8df_648f388c84df" name="cMyct" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species id="mw37817cb4_62e2_420c_8ea5_0b6ec60a5bd4" name="ppRbt" compartment="mw06a618f5_f884_46a9_8352_8240cd75a1ec" initialAmount="0" substanceUnits="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="mw61479959_df1c_4bac_ba98_84745f18350e" name="k_ER" value="0.0207" units="MWDERIVEDUNIT_micromole__hour" constant="true"/>
+      <parameter id="mw916f9207_8b91_4fa4_9a5b_4d43e4bcb6a8" name="kd_ER" value="0.1" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mwe519a881_81b0_4737_98b9_3b4be3ec5db7" name="kd_E2ER" value="0.3" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw2163fe1b_5b04_45dd_ae10_91c0207965db" name="kb_E2ER" value="4266.4776" units="MWDERIVEDUNIT_1__micromole_hour" constant="true"/>
+      <parameter id="mw1eb1e4c0_239c_4568_b21e_ed29358980aa" name="kub_E2ER" value="1" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mwf5406a41_d3e0_41d7_ba5b_1c97acd1cd53" name="kb_ICIER" value="206.8202" units="MWDERIVEDUNIT_1__micromole_hour" constant="true"/>
+      <parameter id="mw71b85087_d91e_487a_9d82_eedf349a8ac7" name="kub_ICIER" value="1" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mwf4151eca_ee03_499f_95dc_cceb116408fd" name="kd_ICIER" value="0.5184" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw4c724ed3_55a0_4cef_acb3_314c2344e4c2" name="k_cyclinD1" value="0.1375" units="MWDERIVEDUNIT_micromole__hour" constant="true"/>
+      <parameter id="mwde08ad47_7d20_4809_b393_22211d285258" name="kd_cyclinD1" value="1.73" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw208fd1e2_cd9e_4cf2_b61a_ccf7b8746281" name="k_cyclinD1E2ER" value="11.5734" constant="true"/>
+      <parameter id="mw8b045195_dd91_483d_aa76_30f3936d8115" name="p_cyclinD1E2ER_1" value="2.6086" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw8895392d_931d_4df0_a3a2_8ebb0b2b8a55" name="p_cyclinD1E2ER_2" value="0.1704" constant="true"/>
+      <parameter id="mw1a6728da_f48f_4c43_ada1_f34adf362f3c" name="kb_cyclinD1p21" value="32.0864" units="MWDERIVEDUNIT_1__micromole_hour" constant="true"/>
+      <parameter id="mwcd0b82e5_6d40_405d_8855_4966f04f5967" name="kub_cyclinD1p21" value="1" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mwad744d25_c79b_427f_9beb_12f49bc88ff9" name="kb_cyclinD1palbo" value="5.1776" units="MWDERIVEDUNIT_1__micromole_hour" constant="true"/>
+      <parameter id="mw6c4bc6c9_e1ed_434e_9d0e_1c1252822a04" name="kub_cyclinD1palbo" value="1" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw0021c86d_f577_4178_ada9_1d16e99099a0" name="k_cMyc" value="0.33" units="MWDERIVEDUNIT_micromole__hour" constant="true"/>
+      <parameter id="mw6903061d_0ed6_417f_b2c8_9216d5e40230" name="kd_cMyc" value="2.31" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw10cf0355_f365_4e65_b779_195c62c1374f" name="k_cMycE2ER" value="14.1779" constant="true"/>
+      <parameter id="mwa039cf07_0e2e_4748_9877_fc86afafd239" name="p_cMycE2ER_1" value="0.0282" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mwdf13e8de_c47a_4ded_a3d6_dd2e7feb356c" name="p_cMycE2ER_2" value="6.998" constant="true"/>
+      <parameter id="mwf9d875db_fa01_4e3b_a53a_8cb6dda84351" name="k_cMycppRb" value="37.3017" constant="true"/>
+      <parameter id="mwa08e806e_e73b_4e1c_a6b6_b0bb232a6aaf" name="p_cMycppRb_1" value="5.5045" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw91b2fb26_5992_416f_90cc_0cdf83621c9e" name="p_cMycppRb_2" value="5.3598" constant="true"/>
+      <parameter id="mwd8ac49b5_21ea_4353_bf63_341bf5860c4c" name="k_p21" value="1.2879" units="MWDERIVEDUNIT_micromole__hour" constant="true"/>
+      <parameter id="mw7fbcda5a_c1e8_414b_8f3e_f7d4d7ce507e" name="kd_p21" value="1.39" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw21133250_eb1e_4a92_828e_becede7c436e" name="p_p21cMyc_1" value="9.2431" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw216d556c_caf2_48ad_9f2d_8e2f715a0310" name="p_p21cMyc_2" value="2.4352" constant="true"/>
+      <parameter id="mwc0135c7f_710f_4842_95c7_870f48cd5ee2" name="k_cyclinE" value="0.8058" units="MWDERIVEDUNIT_micromole__hour" constant="true"/>
+      <parameter id="mwd3e0941c_8fdd_4e10_bf8c_1b89cc332597" name="kd_cyclinE" value="1.39" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mwe1ebbc5c_4966_4580_8a9e_b3b3f5be676e" name="kb_cyclinEp21" value="20.9396" units="MWDERIVEDUNIT_1__micromole_hour" constant="true"/>
+      <parameter id="mwf7d11435_74ab_46e1_9f48_467b6d26d47d" name="kub_cyclinEp21" value="1" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mwf9690553_7353_43fa_b4e9_b99230661836" name="k_Rb" value="3.267" units="MWDERIVEDUNIT_micromole__hour" constant="true"/>
+      <parameter id="mw1243bce5_ef9c_4573_9644_7d6e149e88f6" name="kd_Rb" value="0.35" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw2a585a02_21a4_460a_beda_a64530254642" name="k_RbppRb" value="390.8695" units="MWDERIVEDUNIT_micromole__hour" constant="true"/>
+      <parameter id="mw5f84df56_359f_41ff_9778_fa2dc4d786cd" name="p_RbppRb_1" value="10.7606" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw87bb2a71_473a_4f79_a45a_522fbaa17d82" name="p_RbppRb_2" value="7" constant="true"/>
+      <parameter id="mw1e5115a0_2819_4c65_8706_677c9eec0865" name="k_RbcyclinD1" value="15.0134" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw57b2f706_bae5_4a81_95d4_6f8ed9bd8b50" name="k_pRbdepho" value="23.6192" units="MWDERIVEDUNIT_micromole__hour" constant="true"/>
+      <parameter id="mw224bb995_377e_4406_b453_8d3cb30d1596" name="kd_pRb" value="0.8" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mwc56d3427_29e0_4b2f_9710_9169a58e8db3" name="k_RbcyclinE" value="5.3707" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw00824e83_bead_4218_8b1c_72b348c70123" name="k_ppRbdepho" value="9.2727" units="MWDERIVEDUNIT_micromole__hour" constant="true"/>
+      <parameter id="mw37983134_b6ee_4143_9e64_c021e88d4471" name="kd_ppRb" value="0.05" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw267db557_bff9_4bb9_b48f_aa2828a8ce17" name="p_cyclinD1Rb_1" value="14.0135" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mwa5573dae_b15a_4d5f_911e_1a511b336272" name="p_cyclinD1Rb_2" value="3.1884" constant="true"/>
+      <parameter id="mw0db0941c_10ee_4b0f_b244_2fc301db2f2e" name="p_pRb_1" value="0.6772" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw64e24708_8425_4b3a_b668_acb335d49c9d" name="p_pRb_2" value="7" constant="true"/>
+      <parameter id="mw56a0fb03_1e7a_4226_8f86_3ff308a0f7e7" name="p_cyclinEpRb_1" value="6.3544" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw76f249d0_c781_4e84_8091_7f45a2996dea" name="p_cyclinEpRb_2" value="0.3503" constant="true"/>
+      <parameter id="mw2b842512_f76c_4b3b_909a_86b80b459f96" name="p_ppRb_1" value="59.8461" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw3d58b9bc_1335_4cb8_99d8_682663fde2fd" name="p_ppRb_2" value="2.11" constant="true"/>
+      <parameter id="mwc011a11c_7f2b_48a2_a836_98500ee2e9cd" name="k_pro" value="0.0001196" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="mw2053e20e_fe50_422e_b7fb_047b771a5c3c" name="k_proppRb" value="266.3026" constant="true"/>
+      <parameter id="mw81a2678a_98ea_4c51_93ee_947fbb81eaf3" name="p_proppRb_1" value="6.0056" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw1db0a805_dba7_49a2_8a14_93a5b231e01e" name="p_proppRb_2" value="6" constant="true"/>
+      <parameter id="mwcdcb2694_099b_4166_a4a1_71cefcac1eba" name="k_carrying" value="37.3859" constant="true"/>
+      <parameter id="mwa99d6cb3_841f_4145_b768_9106a09c3c74" name="E2dep1" value="9.6676e-05" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw38fbd62e_105f_4841_9431_67d4908dc092" name="E2dep2" value="2.3e-05" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw08dfdf12_b61c_4241_9fc9_745c1a04e8f8" name="E2" value="9.6676e-05" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="false"/>
+      <parameter id="mwf650446f_fd06_44b3_b558_8bfafcff46c1" name="ICI" value="0.5" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mwed1c457a_b9a8_4590_8a2b_8f74a61117f6" name="palbo" value="0" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw1a6c72ee_8ee9_4c42_a900_e48ca993f029" name="ERt0" value="0.070387531864507" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mwbcd03b90_3dc0_493f_b887_e6a1bca73727" name="cyclinD1t0" value="0.401081556745185" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw532ab2b0_cc79_4778_8885_279d9f47c1bf" name="p21t0" value="0.594501877460992" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mwae478d03_a0fa_4d50_a9fe_30199fd79e59" name="Rbt0" value="84.644709626858" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mw8593b0f3_3436_4c8c_9b83_2c52e37eb7c7" name="cMyct0" value="6.53486367895232" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+      <parameter id="mwe9121304_13f6_4d5f_a708_17f5921a520b" name="ppRbt0" value="7.30631527260022" units="MWBUILTINPREFIX_micro_MWBUILTINUNIT_mole" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <rateRule variable="mwcab96836_5f80_41d4_98fe_893c7557c108">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <ci> mw61479959_df1c_4bac_ba98_84745f18350e </ci>
+                    <apply>
+                      <times/>
+                      <ci> mw916f9207_8b91_4fa4_9a5b_4d43e4bcb6a8 </ci>
+                      <ci> mwcab96836_5f80_41d4_98fe_893c7557c108 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> mw2163fe1b_5b04_45dd_ae10_91c0207965db </ci>
+                    <ci> mw08dfdf12_b61c_4241_9fc9_745c1a04e8f8 </ci>
+                    <ci> mwcab96836_5f80_41d4_98fe_893c7557c108 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> mw1eb1e4c0_239c_4568_b21e_ed29358980aa </ci>
+                  <ci> mw732f7895_6c40_43f1_8001_6bdf949d3c68 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mwf5406a41_d3e0_41d7_ba5b_1c97acd1cd53 </ci>
+                <ci> mwf650446f_fd06_44b3_b558_8bfafcff46c1 </ci>
+                <ci> mwcab96836_5f80_41d4_98fe_893c7557c108 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mw71b85087_d91e_487a_9d82_eedf349a8ac7 </ci>
+              <ci> mwae3bf4e1_8b50_48e5_9cd2_3b20f73a00c4 </ci>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mw732f7895_6c40_43f1_8001_6bdf949d3c68">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <ci> mwe519a881_81b0_4737_98b9_3b4be3ec5db7 </ci>
+                </apply>
+                <ci> mw732f7895_6c40_43f1_8001_6bdf949d3c68 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mw2163fe1b_5b04_45dd_ae10_91c0207965db </ci>
+                <ci> mw08dfdf12_b61c_4241_9fc9_745c1a04e8f8 </ci>
+                <ci> mwcab96836_5f80_41d4_98fe_893c7557c108 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mw1eb1e4c0_239c_4568_b21e_ed29358980aa </ci>
+              <ci> mw732f7895_6c40_43f1_8001_6bdf949d3c68 </ci>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mwae3bf4e1_8b50_48e5_9cd2_3b20f73a00c4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> mwf5406a41_d3e0_41d7_ba5b_1c97acd1cd53 </ci>
+                <ci> mwf650446f_fd06_44b3_b558_8bfafcff46c1 </ci>
+                <ci> mwcab96836_5f80_41d4_98fe_893c7557c108 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mw71b85087_d91e_487a_9d82_eedf349a8ac7 </ci>
+                <ci> mwae3bf4e1_8b50_48e5_9cd2_3b20f73a00c4 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mwf4151eca_ee03_499f_95dc_cceb116408fd </ci>
+              <ci> mwae3bf4e1_8b50_48e5_9cd2_3b20f73a00c4 </ci>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mw630a5401_4594_46aa_a502_35e6dbc9a860">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <minus/>
+                        <ci> mwde08ad47_7d20_4809_b393_22211d285258 </ci>
+                      </apply>
+                      <ci> mw630a5401_4594_46aa_a502_35e6dbc9a860 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> mw4c724ed3_55a0_4cef_acb3_314c2344e4c2 </ci>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <times/>
+                            <ci> mw208fd1e2_cd9e_4cf2_b61a_ccf7b8746281 </ci>
+                            <apply>
+                              <power/>
+                              <ci> mw732f7895_6c40_43f1_8001_6bdf949d3c68 </ci>
+                              <ci> mw8895392d_931d_4df0_a3a2_8ebb0b2b8a55 </ci>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <plus/>
+                            <apply>
+                              <power/>
+                              <ci> mw8b045195_dd91_483d_aa76_30f3936d8115 </ci>
+                              <ci> mw8895392d_931d_4df0_a3a2_8ebb0b2b8a55 </ci>
+                            </apply>
+                            <apply>
+                              <power/>
+                              <ci> mw732f7895_6c40_43f1_8001_6bdf949d3c68 </ci>
+                              <ci> mw8895392d_931d_4df0_a3a2_8ebb0b2b8a55 </ci>
+                            </apply>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> mw1a6728da_f48f_4c43_ada1_f34adf362f3c </ci>
+                    <ci> mw630a5401_4594_46aa_a502_35e6dbc9a860 </ci>
+                    <ci> mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> mwcd0b82e5_6d40_405d_8855_4966f04f5967 </ci>
+                  <ci> mwaaaed7d5_121b_49b5_acc0_e30372f11c44 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mwad744d25_c79b_427f_9beb_12f49bc88ff9 </ci>
+                <ci> mw630a5401_4594_46aa_a502_35e6dbc9a860 </ci>
+                <ci> mwed1c457a_b9a8_4590_8a2b_8f74a61117f6 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mw6c4bc6c9_e1ed_434e_9d0e_1c1252822a04 </ci>
+              <ci> mwf2d9d900_de26_4313_af00_17bd60f0caef </ci>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mwaaaed7d5_121b_49b5_acc0_e30372f11c44">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <ci> mwde08ad47_7d20_4809_b393_22211d285258 </ci>
+                </apply>
+                <ci> mwaaaed7d5_121b_49b5_acc0_e30372f11c44 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mw1a6728da_f48f_4c43_ada1_f34adf362f3c </ci>
+                <ci> mw630a5401_4594_46aa_a502_35e6dbc9a860 </ci>
+                <ci> mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mwcd0b82e5_6d40_405d_8855_4966f04f5967 </ci>
+              <ci> mwaaaed7d5_121b_49b5_acc0_e30372f11c44 </ci>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mwf2d9d900_de26_4313_af00_17bd60f0caef">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <ci> mwde08ad47_7d20_4809_b393_22211d285258 </ci>
+                </apply>
+                <ci> mwf2d9d900_de26_4313_af00_17bd60f0caef </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mwad744d25_c79b_427f_9beb_12f49bc88ff9 </ci>
+                <ci> mw630a5401_4594_46aa_a502_35e6dbc9a860 </ci>
+                <ci> mwed1c457a_b9a8_4590_8a2b_8f74a61117f6 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mw6c4bc6c9_e1ed_434e_9d0e_1c1252822a04 </ci>
+              <ci> mwf2d9d900_de26_4313_af00_17bd60f0caef </ci>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mw96000cb9_f2e6_4e14_8013_960c9dc496f1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <apply>
+                <minus/>
+                <ci> mw6903061d_0ed6_417f_b2c8_9216d5e40230 </ci>
+              </apply>
+              <ci> mw96000cb9_f2e6_4e14_8013_960c9dc496f1 </ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mw0021c86d_f577_4178_ada9_1d16e99099a0 </ci>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> mw10cf0355_f365_4e65_b779_195c62c1374f </ci>
+                    <apply>
+                      <power/>
+                      <ci> mw732f7895_6c40_43f1_8001_6bdf949d3c68 </ci>
+                      <ci> mwdf13e8de_c47a_4ded_a3d6_dd2e7feb356c </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mwa039cf07_0e2e_4748_9877_fc86afafd239 </ci>
+                      <ci> mwdf13e8de_c47a_4ded_a3d6_dd2e7feb356c </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> mw732f7895_6c40_43f1_8001_6bdf949d3c68 </ci>
+                      <ci> mwdf13e8de_c47a_4ded_a3d6_dd2e7feb356c </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> mwf9d875db_fa01_4e3b_a53a_8cb6dda84351 </ci>
+                    <apply>
+                      <power/>
+                      <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                      <ci> mw91b2fb26_5992_416f_90cc_0cdf83621c9e </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mwa08e806e_e73b_4e1c_a6b6_b0bb232a6aaf </ci>
+                      <ci> mw91b2fb26_5992_416f_90cc_0cdf83621c9e </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                      <ci> mw91b2fb26_5992_416f_90cc_0cdf83621c9e </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <minus/>
+                        <ci> mw7fbcda5a_c1e8_414b_8f3e_f7d4d7ce507e </ci>
+                      </apply>
+                      <ci> mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> mwd8ac49b5_21ea_4353_bf63_341bf5860c4c </ci>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <power/>
+                          <ci> mw21133250_eb1e_4a92_828e_becede7c436e </ci>
+                          <ci> mw216d556c_caf2_48ad_9f2d_8e2f715a0310 </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <power/>
+                            <ci> mw21133250_eb1e_4a92_828e_becede7c436e </ci>
+                            <ci> mw216d556c_caf2_48ad_9f2d_8e2f715a0310 </ci>
+                          </apply>
+                          <apply>
+                            <power/>
+                            <ci> mw96000cb9_f2e6_4e14_8013_960c9dc496f1 </ci>
+                            <ci> mw216d556c_caf2_48ad_9f2d_8e2f715a0310 </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> mw1a6728da_f48f_4c43_ada1_f34adf362f3c </ci>
+                    <ci> mw630a5401_4594_46aa_a502_35e6dbc9a860 </ci>
+                    <ci> mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> mwcd0b82e5_6d40_405d_8855_4966f04f5967 </ci>
+                  <ci> mwaaaed7d5_121b_49b5_acc0_e30372f11c44 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mwe1ebbc5c_4966_4580_8a9e_b3b3f5be676e </ci>
+                <ci> mw1d8fadfb_5abc_400e_aea5_d1ff6d880cdf </ci>
+                <ci> mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mwf7d11435_74ab_46e1_9f48_467b6d26d47d </ci>
+              <ci> mwea85c523_f44d_4eeb_9ef3_046d4b1bacbf </ci>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mw1d8fadfb_5abc_400e_aea5_d1ff6d880cdf">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <ci> mwc0135c7f_710f_4842_95c7_870f48cd5ee2 </ci>
+                <apply>
+                  <times/>
+                  <ci> mwd3e0941c_8fdd_4e10_bf8c_1b89cc332597 </ci>
+                  <ci> mw1d8fadfb_5abc_400e_aea5_d1ff6d880cdf </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mwe1ebbc5c_4966_4580_8a9e_b3b3f5be676e </ci>
+                <ci> mw1d8fadfb_5abc_400e_aea5_d1ff6d880cdf </ci>
+                <ci> mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mwf7d11435_74ab_46e1_9f48_467b6d26d47d </ci>
+              <ci> mwea85c523_f44d_4eeb_9ef3_046d4b1bacbf </ci>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mwea85c523_f44d_4eeb_9ef3_046d4b1bacbf">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <ci> mwd3e0941c_8fdd_4e10_bf8c_1b89cc332597 </ci>
+                </apply>
+                <ci> mwea85c523_f44d_4eeb_9ef3_046d4b1bacbf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> mwe1ebbc5c_4966_4580_8a9e_b3b3f5be676e </ci>
+                <ci> mw1d8fadfb_5abc_400e_aea5_d1ff6d880cdf </ci>
+                <ci> mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> mwf7d11435_74ab_46e1_9f48_467b6d26d47d </ci>
+              <ci> mwea85c523_f44d_4eeb_9ef3_046d4b1bacbf </ci>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mwa1d1b0e5_5621_4ea2_bb3e_2f11acc77c6c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <ci> mw1243bce5_ef9c_4573_9644_7d6e149e88f6 </ci>
+                  </apply>
+                  <ci> mwa1d1b0e5_5621_4ea2_bb3e_2f11acc77c6c </ci>
+                </apply>
+                <ci> mwf9690553_7353_43fa_b4e9_b99230661836 </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> mw2a585a02_21a4_460a_beda_a64530254642 </ci>
+                    <apply>
+                      <power/>
+                      <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                      <ci> mw87bb2a71_473a_4f79_a45a_522fbaa17d82 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mw5f84df56_359f_41ff_9778_fa2dc4d786cd </ci>
+                      <ci> mw87bb2a71_473a_4f79_a45a_522fbaa17d82 </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                      <ci> mw87bb2a71_473a_4f79_a45a_522fbaa17d82 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> mw1e5115a0_2819_4c65_8706_677c9eec0865 </ci>
+                  <ci> mw630a5401_4594_46aa_a502_35e6dbc9a860 </ci>
+                  <apply>
+                    <power/>
+                    <ci> mwa1d1b0e5_5621_4ea2_bb3e_2f11acc77c6c </ci>
+                    <ci> mwa5573dae_b15a_4d5f_911e_1a511b336272 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> mw267db557_bff9_4bb9_b48f_aa2828a8ce17 </ci>
+                    <ci> mwa5573dae_b15a_4d5f_911e_1a511b336272 </ci>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> mwa1d1b0e5_5621_4ea2_bb3e_2f11acc77c6c </ci>
+                    <ci> mwa5573dae_b15a_4d5f_911e_1a511b336272 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw57b2f706_bae5_4a81_95d4_6f8ed9bd8b50 </ci>
+                <apply>
+                  <power/>
+                  <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+                  <ci> mw64e24708_8425_4b3a_b668_acb335d49c9d </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <ci> mw0db0941c_10ee_4b0f_b244_2fc301db2f2e </ci>
+                  <ci> mw64e24708_8425_4b3a_b668_acb335d49c9d </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+                  <ci> mw64e24708_8425_4b3a_b668_acb335d49c9d </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mw150892bd_c83b_4567_b0ae_c04025551ad3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <minus/>
+                      <ci> mw224bb995_377e_4406_b453_8d3cb30d1596 </ci>
+                    </apply>
+                    <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> mw1e5115a0_2819_4c65_8706_677c9eec0865 </ci>
+                      <ci> mw630a5401_4594_46aa_a502_35e6dbc9a860 </ci>
+                      <apply>
+                        <power/>
+                        <ci> mwa1d1b0e5_5621_4ea2_bb3e_2f11acc77c6c </ci>
+                        <ci> mwa5573dae_b15a_4d5f_911e_1a511b336272 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mw267db557_bff9_4bb9_b48f_aa2828a8ce17 </ci>
+                        <ci> mwa5573dae_b15a_4d5f_911e_1a511b336272 </ci>
+                      </apply>
+                      <apply>
+                        <power/>
+                        <ci> mwa1d1b0e5_5621_4ea2_bb3e_2f11acc77c6c </ci>
+                        <ci> mwa5573dae_b15a_4d5f_911e_1a511b336272 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> mw57b2f706_bae5_4a81_95d4_6f8ed9bd8b50 </ci>
+                    <apply>
+                      <power/>
+                      <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+                      <ci> mw64e24708_8425_4b3a_b668_acb335d49c9d </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mw0db0941c_10ee_4b0f_b244_2fc301db2f2e </ci>
+                      <ci> mw64e24708_8425_4b3a_b668_acb335d49c9d </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+                      <ci> mw64e24708_8425_4b3a_b668_acb335d49c9d </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> mwc56d3427_29e0_4b2f_9710_9169a58e8db3 </ci>
+                  <ci> mw1d8fadfb_5abc_400e_aea5_d1ff6d880cdf </ci>
+                  <apply>
+                    <power/>
+                    <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+                    <ci> mw76f249d0_c781_4e84_8091_7f45a2996dea </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> mw56a0fb03_1e7a_4226_8f86_3ff308a0f7e7 </ci>
+                    <ci> mw76f249d0_c781_4e84_8091_7f45a2996dea </ci>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+                    <ci> mw76f249d0_c781_4e84_8091_7f45a2996dea </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw00824e83_bead_4218_8b1c_72b348c70123 </ci>
+                <apply>
+                  <power/>
+                  <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                  <ci> mw3d58b9bc_1335_4cb8_99d8_682663fde2fd </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <ci> mw2b842512_f76c_4b3b_909a_86b80b459f96 </ci>
+                  <ci> mw3d58b9bc_1335_4cb8_99d8_682663fde2fd </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                  <ci> mw3d58b9bc_1335_4cb8_99d8_682663fde2fd </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mw34b1e009_f1de_435e_8a7a_7b3cd83118a6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <ci> mw37983134_b6ee_4143_9e64_c021e88d4471 </ci>
+                </apply>
+                <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+              </apply>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> mwc56d3427_29e0_4b2f_9710_9169a58e8db3 </ci>
+                  <ci> mw1d8fadfb_5abc_400e_aea5_d1ff6d880cdf </ci>
+                  <apply>
+                    <power/>
+                    <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+                    <ci> mw76f249d0_c781_4e84_8091_7f45a2996dea </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> mw56a0fb03_1e7a_4226_8f86_3ff308a0f7e7 </ci>
+                    <ci> mw76f249d0_c781_4e84_8091_7f45a2996dea </ci>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+                    <ci> mw76f249d0_c781_4e84_8091_7f45a2996dea </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw00824e83_bead_4218_8b1c_72b348c70123 </ci>
+                <apply>
+                  <power/>
+                  <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                  <ci> mw3d58b9bc_1335_4cb8_99d8_682663fde2fd </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <ci> mw2b842512_f76c_4b3b_909a_86b80b459f96 </ci>
+                  <ci> mw3d58b9bc_1335_4cb8_99d8_682663fde2fd </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                  <ci> mw3d58b9bc_1335_4cb8_99d8_682663fde2fd </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="mwf5519598_9197_43a1_b3fc_7daf2f123df0">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mwc011a11c_7f2b_48a2_a836_98500ee2e9cd </ci>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> mw2053e20e_fe50_422e_b7fb_047b771a5c3c </ci>
+                  <apply>
+                    <power/>
+                    <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                    <ci> mw1db0a805_dba7_49a2_8a14_93a5b231e01e </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> mw81a2678a_98ea_4c51_93ee_947fbb81eaf3 </ci>
+                    <ci> mw1db0a805_dba7_49a2_8a14_93a5b231e01e </ci>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+                    <ci> mw1db0a805_dba7_49a2_8a14_93a5b231e01e </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <ci> mwf5519598_9197_43a1_b3fc_7daf2f123df0 </ci>
+            <apply>
+              <minus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <ci> mwf5519598_9197_43a1_b3fc_7daf2f123df0 </ci>
+                <ci> mwcdcb2694_099b_4166_a4a1_71cefcac1eba </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <assignmentRule variable="mw5110e0b1_1a78_4b4e_90e3_6f89de4ea28e">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <ci> mwcab96836_5f80_41d4_98fe_893c7557c108 </ci>
+              <ci> mw732f7895_6c40_43f1_8001_6bdf949d3c68 </ci>
+              <ci> mwae3bf4e1_8b50_48e5_9cd2_3b20f73a00c4 </ci>
+            </apply>
+            <ci> mw1a6c72ee_8ee9_4c42_a900_e48ca993f029 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="mw41b0d634_e62b_491e_8077_258b60f89c5a">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <ci> mw630a5401_4594_46aa_a502_35e6dbc9a860 </ci>
+              <ci> mwaaaed7d5_121b_49b5_acc0_e30372f11c44 </ci>
+              <ci> mwf2d9d900_de26_4313_af00_17bd60f0caef </ci>
+            </apply>
+            <ci> mwbcd03b90_3dc0_493f_b887_e6a1bca73727 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="mwb773085b_bd65_41d1_b8b3_5bd93589aaf8">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <ci> mw23bc4e1e_f807_4fe3_9cb8_4c53e477e5ca </ci>
+              <ci> mwaaaed7d5_121b_49b5_acc0_e30372f11c44 </ci>
+              <ci> mwea85c523_f44d_4eeb_9ef3_046d4b1bacbf </ci>
+            </apply>
+            <ci> mw532ab2b0_cc79_4778_8885_279d9f47c1bf </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="mweabf9ed5_d75d_4325_8f74_a8919d4c7a23">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <ci> mwa1d1b0e5_5621_4ea2_bb3e_2f11acc77c6c </ci>
+              <ci> mw150892bd_c83b_4567_b0ae_c04025551ad3 </ci>
+              <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+            </apply>
+            <ci> mwae478d03_a0fa_4d50_a9fe_30199fd79e59 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="mw201d8b07_22a6_4d01_b8df_648f388c84df">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> mw96000cb9_f2e6_4e14_8013_960c9dc496f1 </ci>
+            <ci> mw8593b0f3_3436_4c8c_9b83_2c52e37eb7c7 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="mw37817cb4_62e2_420c_8ea5_0b6ec60a5bd4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> mw34b1e009_f1de_435e_8a7a_7b3cd83118a6 </ci>
+            <ci> mwe9121304_13f6_4d5f_a708_17f5921a520b </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfEvents>
+      <event id="mw5deb2475_e1fb_4538_8e58_2bb73a193dec">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <geq/>
+              <apply>
+                <divide/>
+                <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                <cn type="integer"> 24 </cn>
+              </apply>
+              <cn type="integer"> 3 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="mw08dfdf12_b61c_4241_9fc9_745c1a04e8f8">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> mw38fbd62e_105f_4841_9431_67d4908dc092 </ci>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>
