@@ -140,9 +140,10 @@ Avo_Vol=6*10^(15); % Avo_Vol=N_avogadro*Cell_volume
 
 % Parameters -> k for the deterministic reactions, c for the stochastic
 % ones.
-k=[0.0207; 0.1; 4266.4776;206.8202;1;0.3;1; 0.5184;1.73;11.7109;32.0864;...
-5.1776;1;0.1375;0.1375;1;2.31;51.8;1.2879;5.3598;0.8058;2.4352;1.39;20.9396;0.8058;...
-3.267;11.7;7;15.0134;23.6192;0.8;5.3707;9.2727];
+
+%k=[0.0207; 0.1; 4266.4776;206.8202;1;0.3;1; 0.5184;1.73;11.7109;32.0864;...
+%5.1776;1;0.1375;0.1375;1;2.31;51.8;1.2879;5.3598;0.8058;2.4352;1.39;20.9396;0.8058;...
+%3.267;11.7;7;15.0134;23.6192;0.8;5.3707;9.2727];
 
 c=[0.0207*Avo_Vol; 0.1*Avo_Vol; 4266.4776/Avo_Vol;206.8202/Avo_Vol;1*Avo_Vol;0.3/Avo_Vol;1*Avo_Vol; 0.5184*Avo_Vol;1.73*Avo_Vol;11.7109/Avo_Vol;32.0864/Avo_Vol;...
 5.1776*Avo_Vol;1*Avo_Vol;0.1375/Avo_Vol;0.1375*Avo_Vol;1*Avo_Vol;2.31*Avo_Vol;51.8*Avo_Vol;1.2879*Avo_Vol;5.3598*Avo_Vol;0.8058/Avo_Vol;2.4352/Avo_Vol;1.39*Avo_Vol;20.9396*Avo_Vol;0.8058*Avo_Vol;...
@@ -150,7 +151,7 @@ c=[0.0207*Avo_Vol; 0.1*Avo_Vol; 4266.4776/Avo_Vol;206.8202/Avo_Vol;1*Avo_Vol;0.3
 
 
 % chosen delta=0.1
-[T, Dynamics]=simRSSA(vMinus, vPlus, k, initial, 0.1, 7, 0.1)
+[T, Dynamics]=simRSSA(vMinus, vPlus, c, initial, 0.1, 7, 0.1)
 
 proliferation=kpro+(kpro*kprorb1pp*Dynamics(:,16));
 plot(T, Dynamics(:,11))
